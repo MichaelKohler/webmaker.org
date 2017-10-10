@@ -5,7 +5,9 @@
   "scripts": {
     "test": "grunt validate",
     "postinstall": "bower install && grunt build",
-    "download-locales": "webmaker-download-locales webmaker"
+    "download-locales": "webmaker-download-locales webmaker",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -16,7 +18,7 @@
     "async": "0.2.9",
     "commander": "2.0.x",
     "csv": "0.3.x",
-    "express": "3.4.5",
+    "express": "4.16.0",
     "habitat": "0.4.1",
     "helmet": "0.1.2",
     "hood": "0.2.1",
@@ -26,23 +28,24 @@
     "mapquest": "0.0.1",
     "markdown": "0.4.x",
     "messina": "0.1.1",
-    "moment": "2.2.1",
+    "moment": "2.15.2",
     "mox-server": "https://github.com/Pomax/mox-server/archive/master.tar.gz",
-    "mysql": "2.0.x",
+    "mysql": "2.14.0",
     "newrelic": "1.4.0",
     "noxmox": "0.2.x",
-    "nunjucks": "0.1.10",
+    "nunjucks": "2.4.3",
     "rtltr-for-less": "0.0.6",
-    "sequelize": "1.7.0-rc1",
-    "sqlite3": "2.1.17",
+    "sequelize": "2.0.0",
+    "sqlite3": "2.2.0",
     "uuid": "1.4.x",
-    "webmaker-auth": "0.0.9",
+    "webmaker-auth": "1.0.5",
     "webmaker-download-locales": "0.1.0",
     "webmaker-locale-mapping": "latest",
     "webmaker-i18n": "0.3.15",
     "webmaker-loginapi": "https://github.com/mozilla/node-webmaker-loginapi/tarball/v0.1.18",
     "web-literacy-client": "1.1.1",
-    "webmaker-postalservice": "https://github.com/mozilla/node-webmaker-postalservice/tarball/v0.2.6"
+    "webmaker-postalservice": "https://github.com/mozilla/node-webmaker-postalservice/tarball/v0.2.6",
+    "snyk": "^1.42.5"
   },
   "devDependencies": {
     "colors": "0.6.2",
@@ -58,5 +61,6 @@
     "grunt-contrib-uglify": "^0.4.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-express-server": "^0.4.13"
-  }
+  },
+  "snyk": true
 }
